@@ -1,0 +1,391 @@
+/* @font-face {
+    font-family: 'PoetsenOne';
+    src: url('../fonts/PoetsenOne-Regular.ttf') format('truetype');
+    
+}
+
+@font-face {
+    font-family: 'HarabaraMaisDemo';
+    src: url('../fonts/Harabara-Mais-Demo.otf') format('truetype');
+    
+} */
+
+/*stlyle di bawah*/
+
+
+
+#page1, #page2 {
+    font: 16px/30px 'arial';
+    background-image: url(../img/pattern.png) ;
+}
+
+#page1 .container, #page2 .container {
+    position: relative;
+    width: 900px;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    
+}
+
+#page1 header, #page2 header {
+    position: relative;
+    padding: 23px 50px 10px 50px;
+    /* background-image: linear-gradient(#0f5dea, #4b34ce); */
+    background-color: #dd9b0d ;
+    height: fit-content;
+    
+}
+
+#page1 header h1, #page2 header h1 {
+    margin-bottom: 3px;
+    font-family: 'HarabaraMaisDemo';
+    font-size: 45px;
+    color: white;
+}
+
+#page1 header h1 a, #page2 header h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+#page1 header p, #page2 header p {
+    font-family: 'arial';
+    font-size: 13px;
+    color: white;
+}
+
+#page1 header ul, #page2 header ul {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    font-family: 'arial';
+    display: inline-block;
+    list-style: none;
+}
+
+#page1 header ul li a:first-child, #page2 header ul li a:first-child {
+    text-decoration: none;
+    color: white;    
+}
+
+#page1 header ul li:hover a, #page2 header ul li:hover a {
+    background-color: blue;    
+    border-radius: 10px;
+}
+
+#page1 header ul li, #page2 header ul li {
+    display: inline-block;
+    padding: 0 30px 0 0;
+    font-size: 13px;
+    color: white;  
+}
+
+#page2 main
+{
+    display: flex;
+    /* justify-content: space-between; */
+    /* padding: 0; */
+    /* background-color: tomato; */
+}
+
+#page2 main article
+{
+    order: 1;
+    flex: 3 1 0;
+    margin-right: 25px;
+}
+
+#page2 main aside
+{
+    order: 2;
+    flex: 1 1 0;
+}
+
+/* header ul li:nth-child(3) {
+    
+    padding-right: 0;
+} */
+
+#page1 main, #page2 main {
+    padding: 50px;
+}
+
+/* main article {
+    width: 500px;
+} */
+
+#page1 main p, #page2 main p {
+    text-align: justify;
+}
+
+#page2 main span {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+/* #page2 main aside {
+    position: absolute;
+    right: 50px;
+    top: 190px;
+    float: right;
+} */
+
+#page2 aside {
+    background-color: #0f5dea ;
+    width: 250px;
+    /* padding: 10px; */
+}
+
+#page2 table th,td {
+    padding: 10px;
+    color: white;
+}
+
+#page1 footer, #page2 footer {
+    position: absolute;
+    background-color: #0f5dea;
+    height: 60px;
+    width: 900px;
+}
+
+#page1 footer img, #page2 footer img 
+{
+    width: 20px;
+}
+
+#page1 footer .bungkus-icon, #page2 footer .bungkus-icon 
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: fit-content;
+    transform: translate(-50%, -50%);
+}
+
+#page1 footer .bungkus-icon .p1, #page2 footer .bungkus-icon .p1 {
+    
+    /* margin: 14px 10px 10px 172px; */
+    font-size: 30px;
+    color: white;  
+}
+
+#page1 footer .bungkus-icon .fb, #page2 footer .bungkus-icon .fb {
+    color: white;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#page1 footer .bungkus-icon .tw, #page2 footer .bungkus-icon .tw {
+    color: white;
+}
+
+/* responsive */
+@media (max-width: 1024px)
+{
+    #page1 .container, #page2 .container
+    {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: unset;
+        width: 360px;  
+        margin: 0 auto;        
+    }
+
+    #page1 header, #page2 header
+    {
+        order: 1;
+        display: flex;
+        position: unset;    
+        align-items: center;
+        flex-direction: column; 
+        padding: 25px 0 10px 0;
+        width: 360px;
+        /* background-color: red; */
+    }
+
+    #page1 header h1, #page2 header h1
+    {    
+        order: 1;
+        padding: unset;
+        margin-bottom: 7px;
+        font-size: 65px;
+        /* background-color: rgb(138, 80, 230); */
+    }
+
+    #page1 header p, #page2 header p
+    {
+        order: 2;
+        font-size: 16px;
+        /* background-color: turquoise; */
+    }
+    
+    #page1 header ul, #page2 header ul
+    {
+        display: flex;
+        justify-content: space-around;
+        order: 3;
+        position: unset;
+        width: 230px;
+        right: 0;
+        top: 0;
+        margin-top: 1px;
+        background-color: rgb(84 86 64);
+    }
+
+    #page1 header ul li, #page2 header ul li
+    {
+        display: unset;
+        padding: 0;
+        font-size: 15px;
+    }
+    
+    #page1 main, #page2 main 
+    {
+        order: 2;
+        display: flex; 
+        /* justify-content: space-between; */
+        width: 360px;
+        padding: 0;
+        /* background-color: crimson;  */
+    }
+
+    #page1 main article
+    {
+        padding: 17px;
+    }
+
+    #page2 main article
+    {
+        display: flex;
+        order: 1;
+        flex-grow: 3;
+        flex-direction: column; 
+        /* background-color: darkgreen; */
+    }
+
+    #page2 main aside
+    {
+        display: flex;
+        justify-content: flex-end;
+        order: 2;
+        background-color: unset;
+        
+    }
+
+    #page2 main aside table
+    {
+        /* display: flex; */
+        position: unset;
+        float: none;
+        order: 1;
+        width: 150px;
+        margin-top: 20px;   
+        background-color: rgb(84 86 64);
+            
+    } 
+
+
+    #page2 main article span 
+    {
+        order: 1;
+        margin: 17px 17px 0 17px;
+        font-size: 27px;
+        box-sizing: border-box;
+    }
+
+    #page2 main article p 
+    {
+        order: 2;
+        margin: 5px 17px 17px 17px;
+        line-height: 20px;
+        width: 150px;
+        /* background-color: pink; */      
+    }
+    
+    #page1 footer, #page2 footer
+    {
+        order: 3;
+        position: unset;
+        display: flex;
+        align-items: center;
+        width: 360px;
+        height: 40px;  
+        background-color: rgb(84 86 64);  
+    }
+
+    #page1 footer .bungkus-icon,  #page2 footer .bungkus-icon
+    {
+        position: unset;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* background-color: black; */
+        left: 0;
+        top: 0;
+        transform: translate(0,0);
+        width: 360px;             
+    }
+
+    #page1 footer .bungkus-icon .p1, #page2 footer .bungkus-icon .p1
+    {
+        order: 1;
+        flex-grow: 0;
+        font-size: 12px;
+        /* background-color: yellow; */     
+    }
+
+    #page1 footer .bungkus-icon .p2, #page2 footer .bungkus-icon .p2
+    {
+        font-size: 12px;
+    }
+
+    #page1 footer .bungkus-icon .p3, #page2 footer .bungkus-icon .p3
+    {
+        font-size: 12px;
+    }
+
+    #page1 footer .bungkus-icon .fb, #page2 footer .bungkus-icon .fb
+    {
+        display: flex;
+        align-items: center;
+        flex-grow: 0;
+        order:2;
+        /* background-color: blue; */
+        
+    }
+
+    #page1 footer .bungkus-icon .fb img, #page2 footer .bungkus-icon .fb img
+    {
+        width: 10px;
+        height: 10px;
+        margin-right: 3px;
+        margin-left: -10px;
+    }
+
+    #page1 footer .bungkus-icon .tw, #page2 footer .bungkus-icon .tw
+    {
+        display: flex;
+        flex-grow: 0;
+        order: 3; 
+        align-items: center;  
+        margin-left: -10px;
+        /* background-color: darkturquoise; */
+    }
+
+    #page1 footer .bungkus-icon .tw img, #page2 footer .bungkus-icon .tw img
+    {
+        margin-right: 3px;
+        width: 13px;
+        height: 13px;
+    }
+}
+
+
+    
+
+
+
+
+
+
